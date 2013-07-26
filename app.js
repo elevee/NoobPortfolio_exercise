@@ -259,32 +259,6 @@
 // At this point, make sure you understand every line of code you wrote. Know how the data flow along with when each line of code is being executed. If you aren't sure, ask a neighbor or instructor.
 
 
-// 		var hasError = false;
-//         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-
-//         var emailaddressVal = $("#UserEmail").val();
-//         if(emailaddressVal === '') {
-//         	$("#UserEmail").after('<span class="error">Please enter your email address.</span>');
-//             hasError = true;
-//         }
-
-//         else if(!emailReg.test(emailaddressVal)) {
-//             $("#UserEmail").after('<span class="error">Enter a valid email address.</span>');
-//             hasError = true;
-// //         }
-// 	});
-// });
-
-
-
-var emailEmpty = function(){
-    $('.wrapper').after("<div><p>Yo, your email needs to be like, there.</p></div>")
-};
-
-var passwordEmpty = function(){
-    $('.wrapper').after("<div><p>Yo, your password needs to be like, there.</p></div>")
-};
-
 // Each are at least 8 characters
 $(document).ready(function(){
     // When you click the submit button (look up the submit event handler), validate the following:
@@ -327,77 +301,14 @@ $(document).ready(function(){
         if (!emailReg.test(emailInput)) {
             $('#UserEmail').after("<br /><span class='error'>Email needs to be an ACTUAL F'N EMAIL!</span>");
         }
+        
+        // This message should say the user was successful and it should be formatted in a different manner than the error messages
+        // If everything is valid - have a similar div show up at the top.
         if ($('.error').size() == 0) {
             $('#btn-submit').after("<br /><span class='success'>We good.</span>")
         }
-
-// If everything is valid - have a similar div show up at the top.
-// This message should say the user was successful and it should be formatted in a different manner than the error messages
-// (Remember to prevent the submit button's default action)
-// At this point, make sure you understand every line of code you wrote. Know how the data flow along with when each line of code is being executed. If you aren't sure, ask a neighbor or instructor.
-
-    	
-        // else if ( ($emailInput.indexOf('@') == -1) || ($emailInput.indexOf('.') === -1)
-    	// 	) {
-    	// 	var message = "not a valid email address- must include '@ and '.' symbols "
-    	// errorMessage(message);
-    	// }
-
-    	// if ( $passwordInput == "") {
-    	// 	var message = "Password needs to be at least 8 characters long";
-    	// 	errorMessage(message);
-    	// };
-
-    	// if (!($emailInput == "") && !($emailInput.length < 8 && !($emailInput.indexOf('@') === -1) || 
-    	// 	($emailInput.indexOf('.') === -1)) && !($passwordInput == "") && !($passwordInput.length < 8) ) {
-    	// 	var message = "Success! All is good"; 
-    	// 	successMessage(message);
-    	// }
     });
 });
-
-
-
-//Home Cooked example
-// $(document).ready(function(){
-//     // $('div#error_message').hide();
-//     $('#btn-submit').click(function(){
-//         $('div#error_message').empty();
-//         event.preventDefault();
-//         if (document.getElementById("email").value == "") {
-//             $('div#error_message').show().append("- Enter your email address")
-//     });
-// });
-
-
-
-
-
-
-
-
-// With REGEX example from another site
-// $(document).ready(function(){
-//     $('#btn-submit').click(function() { 
-//         $(".error").hide();
-//         var hasError = false;
-//         
-
-//         var emailaddressVal = $("#UserEmail").val();
-//         if(emailaddressVal == '') {
-//             $("#UserEmail").after('<span class="error">Please enter your email address.</span>');
-//             hasError = true;
-//         }
-
-//         else if(!emailReg.test(emailaddressVal)) {
-//             $("#UserEmail").after('<span class="error">Enter a valid email address.</span>');
-//             hasError = true;
-//         }
-// 	});
-// });
-
-
-
 
 
 // CODE REVIEW: Make sure your code is indented and legible. Break your code down into functions that have sensible names.
