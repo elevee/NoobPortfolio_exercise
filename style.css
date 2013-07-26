@@ -11,6 +11,10 @@ body {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.bgchange {
+	background-color: #E01B5D;
+}
+
 a {
 	text-decoration: none; /*The underline for links looks very old school now, so this gets rid of it.*/
 	color: black;
@@ -110,6 +114,10 @@ h1 {
 	padding: .6em;
 }
 
+.form {
+
+}
+
 /*------------- Styles for the right sidebar ---------------*/
 
 
@@ -123,4 +131,14 @@ h1 {
 footer {
 	clear: both;
 	width: 100%;
+}
+
+.error {
+	background-color: #CC0033;
+	color: white;
+}
+
+.success {
+	background-color: green;
+	color: white;
 }
